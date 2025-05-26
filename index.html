@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Auto Parse Alamat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Tools Auto Parse Alamat FahmiFr</h2>
+  <label for="alamat">Masukkan Alamat Lengkap (dari Maps)</label>
+  <textarea id="alamat" rows="4" placeholder="Contoh: Jl. Menteng Atas No.15, RT.4/RW.6, ..."></textarea>
+  <button onclick="parseAlamat()">PROSES</button>
+  <button onclick="resetForm()">HAPUS</button>
+
+  <div class="output">
+    <label>Detail Alamat:</label>
+    <input type="text" id="detail" readonly>
+    <label>Kecamatan:</label>
+    <input type="text" id="kecamatan" readonly>
+    <label>Kota:</label>
+    <input type="text" id="kota" readonly>
+    <label>Provinsi:</label>
+    <input type="text" id="provinsi" readonly>
+    <label>Kode Pos:</label>
+    <input type="text" id="kodepos" readonly>
+    
+    <label>Hasil Akhir (Gabungan):</label>
+    <textarea id="hasilGabungan" rows="10"></textarea>
+    <button onclick="copyToClipboard()">Copy</button>
+    <button onclick="exportHistory()">Export History ke .txt</button>
+
+    <hr style="margin-top:20px; border-color: #fff;">
+    <h3>History Alamat Sebelumnya:</h3>
+    <div>
+      <button onclick="hapusSatuHistory()">Hapus 1 History Teratas</button>
+      <button onclick="hapusSemuaHistory()">Hapus Semua History</button>
+    </div>
+    <div id="history" style="margin-top: 10px;"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
