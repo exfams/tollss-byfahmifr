@@ -3,13 +3,17 @@ body {
   padding: 20px;
   background: #3b3a3a;
   color: white;
+  margin: 0;
 }
 
 textarea, input, pre {
   width: 100%;
   margin-bottom: 10px;
-  padding: 8px;
+  padding: 10px;
   font-size: 16px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: none;
 }
 
 label {
@@ -20,9 +24,10 @@ label {
 
 .output {
   background: #6d6b6b;
-  padding: 10px;
+  padding: 15px;
   border: 1px solid #ffffff;
-  border-radius: 6px;
+  border-radius: 8px;
+  margin-top: 20px;
 }
 
 pre {
@@ -32,12 +37,39 @@ pre {
   border: 1px dashed #aaa;
   padding: 10px;
   margin-bottom: 10px;
+  border-radius: 4px;
 }
 
 button {
-  padding: 8px 12px;
+  padding: 10px 16px;
   font-size: 16px;
   cursor: pointer;
-  margin-right: 10px;
-  margin-top: 5px;
+  margin: 5px 5px 10px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #008CBA;
+  color: white;
+}
+
+button:hover {
+  background-color: #0073a3;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .output {
+    padding: 10px;
+  }
+
+  textarea, input, pre {
+    font-size: 14px;
+  }
 }
