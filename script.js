@@ -70,7 +70,7 @@ function parseAlamat() {
   document.getElementById("provinsi").value = provinsi;
   document.getElementById("kodepos").value = kodepos;
 
-  const hasilGabung = `${detailAlamat}\n\nProvinsi : ${provinsi}\nKota : ${kota}\nKecamatan : ${kecamatan}\nKode Pos : ${kodepos}`;
+  const hasilGabung = `${detailAlamat}\n\nProvinsi : ${provinsi}\nKota : ${kota}\nKecamatan : ${kecamatan}\nKode Pos : ${kodepos}\n\nbisa disalin dan disamakan ke form sesuai yang admin arahkan yaa kka, kalau sudah , discrenshootkan dari atas sampai bawah agar admin pastikan ulang`;
   document.getElementById("hasilGabungan").value = hasilGabung;
 
   const waktuSekarang = new Date();
